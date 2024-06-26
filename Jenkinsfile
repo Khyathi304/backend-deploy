@@ -7,13 +7,16 @@ pipeline {
         disableConcurrentBuilds()
         ansiColor('xterm')
     }
+
     parameters {
         string(name: 'appVersion', defaultValue: '1.0.0', description: 'What is the application version?')
     }
+
     environment{
         def appVersion = '' //variable declaration
         nexusUrl = 'nexus.daws304.online:8081'
     }
+
     stages {
         stage('print the version'){
             steps{
@@ -66,4 +69,3 @@ pipeline {
             echo 'I will run when pipeline is failure'
         }
     }
-}
