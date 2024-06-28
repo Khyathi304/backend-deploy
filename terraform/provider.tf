@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "daws304-remote-state"
-    key    = "expense-dev-backend"
+    key    = "expense-dev-backend-jenkins"
     region = "us-east-1"
     dynamodb_table = "daws304-locking"
   
